@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--CDN Monserrat Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!--Normalize-->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/app.css">
+    <title>Portafolio Daniel Sandoval</title>
+</head>
+<body>
+
+    <header>
+        <!--Navbar-->
+        <nav class="navbar">
+            <a class="navbar__enlace navbar__enlace--active" href="#">Home</a>
+            <a class="navbar__enlace" href="#">Servicios</a>
+            <a class="navbar__enlace" href="#">Acerca de mi</a>
+            <a class="navbar__enlace" href="#">Mis habilidades</a>
+            <a class="navbar__enlace" href="#">Mi portafolio</a>
+            <a class="navbar__enlace" href="#">Contacto</a>
+        </nav>
+        <!--.Navbar-->
+
+        <!-- The overlay -->
+        <div id="myNav" class="overlay">
+
+            <!-- Button to close the overlay navigation -->
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        
+            <!-- Overlay content -->
+            <div class="overlay-content">
+            <a class="navbar__enlace--active" href="#">Home</a>
+            <a href="#">Acerca de mi</a>
+            <a href="#">Mis habilidades</a>
+            <a href="#">Mi portafolio</a>
+            <a href="#">Contacto</a>
+            </div>
+        
+        </div>
+
+        <div class="navbar__mobile">
+            <img class="navbar__img" onclick="openNav()" src="img/menu.svg" alt="Menu Icon">
+        </div>
+
+        <!--Hero-->
+        <div class="hero">
+            <div class="hero__shapes">
+
+                <div class="elipses">
+                    <img class="elipse__img" src="img/shape.svg" alt="Elipse">
+                    
+                    <div class="hero__grid">
+                        <div class="hero__grid-about">
+                            <p class="hero__grid-name">Soy
+                                <span class="hero__grid-name--blue">Daniel</span>
+                            </p>
+                            <p class="hero__grid-text">Ingeniero de Software</p>
+                        </div>
+                        <!--.About-->
+        
+                        <div class="hero__grid-experience">
+                            <div class="hero__grid-column">
+                                <div class="hero__grid-columngrid">
+                                    <div class="hero__grid-text">
+                                        <span class="hero__grid-text--blue">1 año</span>
+                                        experiencia
+                                    </div>
+                                    <!--.Experiencia-->
+        
+                                    <div class="hero__grid-logos">
+                                        <div class="hero__grid-logo">
+                                            <img src="img/in.svg" alt="LinkedIn Logo">
+                                        </div>
+        
+                                        <div class="hero__grid-logo">
+                                            <img src="img/inst.svg" alt="LinkedIn Logo">
+                                        </div>
+        
+                                        <div class="hero__grid-logo">
+                                            <img src="img/twitter.svg" alt="LinkedIn Logo">
+                                        </div>
+                                    </div>
+                                    <!--.Logos-->
+                                </div>
+                            </div>
+                        </div>
+                        <!--.Columnas texto--> 
+                    </div>
+
+                    <div class="hero__grid-apps">
+                        <div class="hero__grid-app">
+                            <img src="img/google.png" alt="Google Icon">
+                        </div>
+    
+                        <div class="hero__grid-app">
+                            <img src="img/amazon.png" alt="Amazon Icon">
+                        </div>
+    
+                        <div class="hero__grid-app">
+                            <img src="img/spotify.png" alt="Spotify Icon">
+                        </div>
+                    </div>
+                    <!--.Apps-->
+                </div>
+
+            </div>
+            
+        </div>
+        <!--.Hero-->
+    </header>
+
+    <main class="aboutme contenedor">
+        <h2 class="aboutme__title">Acerca de mi</h2>
+
+        <p class="aboutme__text">Tecnólogo en Desarrollo de Software de la Universidad Surcolombiana y actualmente estudiante de noveno semestre en formación como Ingeniero de software en la Universidad Surcolombiana 
+            Tengo habilidades para trabajar en equipo, además de eso cuento con aptitudes que me permiten aprender por mi propia cuenta.
+            Me encuentro con disponibilidad de tiempo, actitud y capacidad para enfrentar retos, desarrollar cualquier actividad que esté relacionada con el desarrollo de software.
+            con el objetivo de ofrecer mis capacidades y conocimientos en beneficio de la empresa o el proyecto que se esté llevando a cabo, además de continuar mi capacitación y aprendizaje permanentemente.</p>
+    </main>
+
+    <section class="services contenedor">
+        <h2 class="services__title">Servicios</h2>
+
+        <div class="services__grid">
+            <div class="service"> 
+                <img class="service__img" src="img/pencil.svg" alt="Pencil Icon">
+                
+                <h4 class="service__title">Analisis y diseño de software</h4>
+
+                <p>Desde diseño hasta implementación del desarrollo</p>
+            </div>
+            <!--.Service-->
+
+            <div class="service"> 
+                <img class="service__img" src="img/sound.svg" alt="Sound Icon">
+                
+                <h4 class="service__title">Marketing</h4>
+
+                <p>Desde diseño hasta implementación del desarrollo</p>
+            </div>
+            <!--.Service-->
+
+            <div class="service"> 
+                <img class="service__img" src="img/search.svg" alt="Search Icon">
+                
+                <h4 class="service__title">UX/UI Design</h4>
+
+                <p>Desde diseño hasta implementación del desarrollo</p>
+            </div>
+            <!--.Service-->
+        </div><!--.Services-->
+    </section>
+
+    <section class="abilities contenedor">
+        <h2 class="abilities__title">Mis habilidades</h2>
+        
+        <div class="abilities__bar">
+            <p class="abilities__bar-text">Web design</p>
+            <div class="abilities__myprogress" id="myProgress">
+                <div class="abilities__mybar" id="myBar"><span class="abilities__percent">80%</span></div>
+            </div>
+        </div>
+
+        <div class="abilities__bar">
+            <p class="abilities__bar-text">Diseño e implementacion de software</p>
+            <div class="abilities__myprogress" id="myProgress">
+                <div class="abilities__mybar" id="myBar"><span class="abilities__percent">80%</span></div>
+            </div>
+        </div>
+
+        <div class="abilities__bar">
+            <p class="abilities__bar-text">html, css, Javascript</p>
+            <div class="abilities__myprogress" id="myProgress">
+                <div class="abilities__mybar abilities__mybar--ux" id="myBar"><span class="abilities__percent abilities__percent--80">80%</span></div>
+            </div>
+        </div>
+    </section>
+    <!--.Abilities-->
+
+    <section class="portfolio">
+        <h2 class="portfolio__title">Mi portafolio</h2>
+
+        <div class="scrolling-wrapper">
+            <div class="card"><img src="img/portfolio1.jpg" alt="portfolio1"></div>
+            <div class="card"><img src="img/portfolio2.jpg" alt="portfolio2"></div>
+            <div class="card"><img src="img/portfolio3.jpg" alt="portfolio3"></div>
+        </div>
+    </section>
+
+    <section class="contact contenedor">
+        <h2 class="contact__title">Contacto</h2>
+
+        <div class="contacts__grid">
+            <div class="contact">
+                <img class="contact__img" src="img/phone.svg" alt="Phone Icon">
+
+                <h5 class="contact__subtitle">Número de celular</h5>
+                <p class="contact__text">+57 3142800015</p>
+            </div>
+            <!--.Contact-->
+
+            <div class="contact">
+                <img class="contact__img" src="img/mail.svg" alt="Mail Icon">
+
+                <h5 class="contact__subtitle">Correo Electronico</h5>
+                <p class="contact__text">daniel970620@gmail.com</p>
+            </div>
+            <!--.Contact-->
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p class="credits">Hecho por <span>Daniel Sandoval</span></p>
+    </footer>
+    
+    <script src="js/app.js"></script>
+</body>
+</html>
